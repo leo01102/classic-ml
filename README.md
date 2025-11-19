@@ -1,64 +1,77 @@
 # Aprendizaje Automático Clásico
 
-Este repositorio incluye implementaciones simples de tres algoritmos fundamentales de Machine Learning:
+Este repositorio contiene implementaciones interactivas de tres algoritmos fundamentales de Machine Learning desarrollados para la cátedra de Inteligencia Artificial de la carrera de Ingeniería en Sistemas de Información.
 
-- **Perceptrón** (`perceptron.py`)
-- **Regresión Lineal** (`linear_regression.py`)
-- **K-Means** (`kmeans.py`)
+El objetivo es proporcionar herramientas claras para entender el funcionamiento interno de estos algoritmos sin depender de librerías de alto nivel como Scikit-Learn para la lógica del modelo.
 
-Todos los scripts se ejecutan de forma interactiva en la terminal y pueden trabajar con archivos `.csv` ubicados en la carpeta `/data`.
+## Documentación Conceptual
 
----
+Para entender en detalle cuándo utilizar cada algoritmo, qué significan sus parámetros y cómo interpretar los resultados, consultá las guías ubicadas en la carpeta `docs/`:
 
-## 📋 Requisitos
+- [Guía del Perceptrón y Clasificación](docs/guia_perceptron.md)
+- [Guía de Regresión Lineal y Regularización](docs/guia_regresion_lineal.md)
+- [Guía de K-Means y Clustering](docs/guia_kmeans.md)
 
-- Python 3.6 o superior  
-- `numpy`  
-- `matplotlib`
+## Requisitos Previos
 
-Instálalos con:
+- Python 3.6 o superior
+- `numpy` (Cálculo numérico base)
+- `matplotlib` (Visualización de gráficos)
+- `rich` (Interfaz interactiva en terminal)
+
+Instalación de dependencias:
 
 ```bash
-pip install numpy matplotlib
+pip install numpy matplotlib rich
 ```
 
----
+## Guía Rápida de Ejecución
 
-## 🚀 Uso de los scripts
+Los scripts buscan archivos `.csv` en la carpeta `data/` o en la ruta absoluta indicada. Se asume que la última columna es la etiqueta (target).
 
-### 1. Perceptrón
+### 1. Perceptrón (`perceptron.py`)
+
+Clasificador lineal para problemas binarios o multiclase.
 
 ```bash
 python perceptron.py
 ```
 
-- Ingresá la ruta al CSV (por ejemplo: `data/iris.csv`).  
-- Elegí el modo `binary` (binario) u `ovr` (One-vs-Rest multiclase).  
-- Configura tasa de aprendizaje, épocas e inicialización de pesos.  
-- Si el dataset es 2D, mostrará la frontera de decisión.
+**Modos disponibles:**
 
-### 2. Regresión Lineal
+- **Binary:** Para separar dos clases (ej. Aceptado/Rechazado).
+- **OvR (One-vs-Rest):** Estrategia para clasificar más de dos clases entrenando múltiples perceptrones.
+- **Test:** Verificar manualmente si un conjunto de pesos funciona.
+- **Grid:** Búsqueda de fuerza bruta para encontrar pesos (educativo para 2D).
+
+### 2. Regresión Lineal (`linear_regression.py`)
+
+Modelo para predecir valores numéricos continuos utilizando mínimos cuadrados.
 
 ```bash
 python linear_regression.py
 ```
 
-- Ingresá la ruta al CSV.  
-- Elegí lambda para regularización (0 = sin regularización).  
-- Verás los coeficientes (bias + pesos) y, si es univariada, se graficará la recta.
+**Características:**
 
-### 3. K-Means
+- Cálculo mediante Ecuación Normal.
+- Soporte para Regularización Ridge (L2) mediante el parámetro Lambda.
+- Gráfico automático si el dataset es de una sola variable.
+
+### 3. K-Means (`kmeans.py`)
+
+Algoritmo no supervisado para agrupar datos basándose en similitud (distancia euclidiana).
 
 ```bash
 python kmeans.py
 ```
 
-- Ingresá la ruta al CSV.  
-- Especificá el número de clusters `k`.  
-- Si los datos son 2D, se mostrará la distribución de clusters y centroides.
+**Configuración:**
 
----
+- Requiere definir el número de clusters (`k`).
+- Detecta automáticamente columnas numéricas y excluye texto.
+- Visualización de clusters y centroides en datos 2D.
 
-## 📄 Licencia
+## Licencia
 
-Este proyecto está bajo **MIT License**.  
+Este proyecto se distribuye bajo la licencia MIT.
