@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "classic-ml"
+version = "0.1.0"
+authors = [
+  { name="Leo", email="leo@example.com" },
+]
+description = "A terminal-based interactive machine learning tool."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "rich",
+    "textual",
+    "textual-plotext",
+]
+
+[project.scripts]
+classic-ml = "classic_ml.app:main"
+
+[tool.setuptools.package-data]
+"classic_ml.data" = ["*.csv"]
