@@ -2,6 +2,8 @@
 
 A modern, terminal-based interactive suite for exploring fundamental Machine Learning algorithms. Built with **Textual** and **Plotext** for a seamless, live-updating experience.
 
+![Classic ML TUI Preview](docs/clml_tui_preview.png)
+
 ## Features
 
 - **Live Calculation**: Adjust parameters (K, Learning Rate, Epochs) and see results update instantly.
