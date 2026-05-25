@@ -17,12 +17,12 @@ A modern, terminal-based interactive suite for exploring fundamental Machine Lea
 
 ## Quick Start
 
-You can now install `clml` directly via pip and run it using the dedicated command.
+You can now install `classic-ml-tui` directly via pip and run it using the dedicated command.
 
 ### Installation
 
 ```bash
-pip install clml
+pip install classic-ml-tui
 ```
 
 ### Running the App
