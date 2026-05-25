@@ -17,12 +17,12 @@ A modern, terminal-based interactive suite for exploring fundamental Machine Lea
 
 ## Quick Start
 
-You can now install `classic-ml` directly via pip and run it using the dedicated command.
+You can now install `clml` directly via pip and run it using the dedicated command.
 
 ### Installation
 
 ```bash
-pip install classic-ml
+pip install clml
 ```
 
 ### Running the App
@@ -30,7 +30,7 @@ pip install classic-ml
 Simply type the following in your terminal:
 
 ```bash
-classic-ml
+clml
 ```
 
 ## Development & Local Setup
